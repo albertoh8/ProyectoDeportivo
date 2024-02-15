@@ -1,0 +1,18 @@
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgb(227, 221, 215);
+}
+
+#fecha {
+  text-align: center;
+  color: rgb(134, 134, 211);
+  background-color: rgb(227, 215, 215);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
