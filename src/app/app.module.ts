@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComunModule } from './comun/comun.module';
 import { SucesosComponent } from './sucesos/sucesos.component';
+import { EquiposModule } from './equipos/equipos.module';
+import { PartidosModule } from './partidos/partidos.module';
+import { SucesosModule } from './sucesos/sucesos.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { SucesosComponent } from './sucesos/sucesos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ComunModule
+    ComunModule,
+    EquiposModule,
+    PartidosModule,
+    SucesosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

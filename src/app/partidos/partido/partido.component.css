@@ -1,0 +1,16 @@
+.contenedor {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.local {
+  width: 50%;
+  height: 100%;
+}
+
+.visit {
+  width: 50%;
+  height: 100%;
+}

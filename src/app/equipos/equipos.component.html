@@ -24,10 +24,13 @@
         </svg></button>
     </div>
     <div class="segundo-div">
-
-      <li *ngFor="let equipo of equipos_list2">
-        <ul>{{equipo.id}}</ul>
-      </li>
+      <div class="card text-white bg-dark mb-3 col-sm-3 col-md-4" style="max-width: 18rem;"
+        *ngFor="let equipo of equipos_list" id="equipos">
+        <div class="card-header">{{equipo.nombre}}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{equipo.id}}</h5>
+        </div>
+      </div>
 
     </div>
   </div>

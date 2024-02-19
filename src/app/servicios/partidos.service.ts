@@ -11,4 +11,8 @@ export class PartidosService {
   getPartidos(): Partido[] {
     return this.partidos;
   }
+
+  getPartidoByIdLocal(idLocal: string): Partido | undefined {
+    return this.partidos.find(partido => partido.idLocal === idLocal);
+  }
 }

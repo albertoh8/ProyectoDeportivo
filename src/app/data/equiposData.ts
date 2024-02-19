@@ -41,16 +41,16 @@ export const equipos_data: Equipo[] = [
     ]
   },
   {
-    id: "Betis(ESP)",
+    id: "BETIS(ESP)",
     nombre: "Real Betis Balompie",
     partidos: [
       {
-        idLocal: "Betis(ESP)",
+        idLocal: "BETIS(ESP)",
         idVisitante: "Sevilla(ESP)",
         fecha: "16-02-2024",
         goles: [
           {
-            idParticipante: "Betis(ESP)",
+            idParticipante: "BETIS(ESP)",
             minuto: "36",
           },
           {
@@ -65,12 +65,60 @@ export const equipos_data: Equipo[] = [
             minuto: "74",
           },
           {
-            idParticipante: "Betis(ESP)",
+            idParticipante: "BETIS(ESP)",
             tipoTarjeta: "AMARILLA",
             minuto: "82",
           }
         ]
       },
     ]
-  }
+  },
+  {
+    id: "GIR(ESP)",
+    nombre: "Girona",
+    partidos: [
+      {
+        idLocal: "GIR(ESP)",
+        idVisitante: "GET(ESP)",
+        fecha: "19-02-2024",
+        goles: [
+          {
+            idParticipante: "GIR(ESP)",
+            minuto: "53",
+          },
+        ],
+        tarjetas: [
+          {
+            idParticipante: "GET(ESP)",
+            tipoTarjeta: "ROJA",
+            minuto: "82",
+          }
+        ]
+      },
+    ]
+  },
+  {
+    id: "ALM(ESP)",
+    nombre: "ALMERIA",
+    partidos: [
+      {
+        idLocal: "ALM(ESP)",
+        idVisitante: "RSOC(ESP)",
+        fecha: "22-02-2024",
+        goles: [
+          {
+            idParticipante: "RSOC(ESP)",
+            minuto: "53",
+          },
+        ],
+        tarjetas: [
+          {
+            idParticipante: "ALM(ESP)",
+            tipoTarjeta: "AMAIRLLA",
+            minuto: "32",
+          }
+        ]
+      },
+    ]
+  },
 ];

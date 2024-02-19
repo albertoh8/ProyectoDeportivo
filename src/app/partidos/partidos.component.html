@@ -10,6 +10,7 @@
 <body>
   <!-- Apartado de la información del componente partidos y el boton de añadir-->
   <div class="contenedor">
+
     <div class="primer-div">
       <br>
       <img
@@ -28,14 +29,20 @@
     </div>
     <!-- Apartado del listado partidos y el buscador-->
     <div class="segundo-div">
-      <br><br>
-      <ul class="partidos-list">
-        <li *ngFor="let partido of listPartidos">
-          {{partido.idLocal}} vs {{partido.idVisitante}}
-        </li>
-      </ul>
+      <router-outlet>
+        <br><br>
+        <ul class="list-group" *ngFor="let partido of listPartidos">
+
+          <li class="list-group-item" id="list">
+            <a href="/partidos/partido/{{partido.idLocal}}">{{partido.idLocal}} vs {{partido.idVisitante}}</a>
+          </li>
+
+        </ul>
+      </router-outlet>
     </div>
+
   </div>
+
 </body>
 
 </html>

@@ -21,20 +21,11 @@
 .segundo-div {
   width: 65%;
   height: 100%;
-
+  background-color: rgb(177, 222, 207);
 }
 
 #list {
   margin-top: 30px;
   margin-left: 40%;
   width: 400px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: black;
 }
