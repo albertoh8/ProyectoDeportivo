@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Gol, Partido } from 'src/app/data/partidosData';
 import { PartidosService } from 'src/app/servicios/partidos.service';
 
@@ -16,7 +16,7 @@ export class PartidoComponent implements OnInit {
   golesVisitante: Gol[] = [];
 
 
-  constructor(private activatedRoute: ActivatedRoute, private partidosService: PartidosService) { }
+  constructor(private activatedRoute: ActivatedRoute, private partidosService: PartidosService, private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((parametros: ParamMap) => {
@@ -26,8 +26,10 @@ export class PartidoComponent implements OnInit {
       this.golesLocal = this.partidoDet?.goles.filter(gol => gol.idParticipante === this.partidoDet?.idLocal) || [];
       this.golesVisitante = this.partidoDet?.goles.filter(gol => gol.idParticipante === this.partidoDet?.idVisitante) || [];
     })
+  }
 
-
+  navToList() {
+    this.router.navigate(['partidos'])
   }
 
 

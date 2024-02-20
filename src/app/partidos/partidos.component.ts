@@ -17,7 +17,11 @@ export class PartidosComponent implements OnInit {
   }
 
   navToPartido(partido: Partido) {
-
     this.router.navigate(['partidos', 'partido', partido.idLocal]);
   }
+
+  navToAddPartido() {
+    this.router.navigate(['partidos', 'addPartido']);
+  }
+
 }

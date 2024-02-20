@@ -19,7 +19,7 @@
       <h1>Partidos</h1><br>
       <p>Apartado que muestra los partidos ocurridos en la Liga de España en la temporada 2023/2024. Mostrando sus
         resultados, se permite la opcion de añadir mas partidos.</p><br><br>
-      <button class="btn btn-light">Añadir Partido
+      <button class="btn btn-light" (click)="navToAddPartido()">Añadir Partido
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus"
           viewBox="0 0 16 16">
           <path
@@ -29,20 +29,11 @@
     </div>
     <!-- Apartado del listado partidos y el buscador-->
     <div class="segundo-div">
-      <router-outlet>
-        <br><br>
-        <ul class="list-group" *ngFor="let partido of listPartidos">
-
-          <li class="list-group-item" id="list">
-            <a href="/partidos/partido/{{partido.idLocal}}">{{partido.idLocal}} vs {{partido.idVisitante}}</a>
-          </li>
-
-        </ul>
-      </router-outlet>
+      <br><br>
+      <router-outlet></router-outlet>
     </div>
-
   </div>
-
 </body>
+
 
 </html>

@@ -15,4 +15,8 @@ export class PartidosService {
   getPartidoByIdLocal(idLocal: string): Partido | undefined {
     return this.partidos.find(partido => partido.idLocal === idLocal);
   }
+
+  addPartido(nuevoPartido: Partido): void {
+    this.partidos.push(nuevoPartido);
+  }
 }

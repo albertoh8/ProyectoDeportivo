@@ -8,6 +8,7 @@ import { SucesosComponent } from './sucesos/sucesos.component';
 import { EquiposModule } from './equipos/equipos.module';
 import { PartidosModule } from './partidos/partidos.module';
 import { SucesosModule } from './sucesos/sucesos.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SucesosModule } from './sucesos/sucesos.module';
     ComunModule,
     EquiposModule,
     PartidosModule,
-    SucesosModule
+    SucesosModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
