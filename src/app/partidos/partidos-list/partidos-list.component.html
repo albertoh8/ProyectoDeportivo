@@ -10,7 +10,7 @@
 <body>
   <ul class="list-group" *ngFor="let partido of listPartidos">
     <li class="list-group-item" id="list">
-      <a href="/partidos/partido/{{partido.idLocal}}">{{partido.idLocal}} vs {{partido.idVisitante}}</a>
+      <a routerLink="/partidos/partido/{{partido.idLocal}}">{{partido.idLocal}} vs {{partido.idVisitante}}</a>
     </li>
   </ul>
 </body>

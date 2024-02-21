@@ -32,5 +32,9 @@ export class PartidoComponent implements OnInit {
     this.router.navigate(['partidos'])
   }
 
+  navToEdit(idLocal: string | undefined) {
+    this.router.navigate(['./partido/edit', idLocal])
+  }
+
 
 }

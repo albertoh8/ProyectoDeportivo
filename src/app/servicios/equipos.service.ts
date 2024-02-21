@@ -5,7 +5,12 @@ import { Equipo, equipos_data } from '../data/equiposData';
   providedIn: 'root'
 })
 export class EquiposService {
+  equipos = equipos_data
   getEquipos(): Equipo[] {
-    return equipos_data;
+    return this.equipos;
+  }
+
+  getEquiposById(id: string): Equipo | undefined {
+    return this.equipos.find(equipo => equipo.id === id);
   }
 }

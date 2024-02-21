@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="segundo-div">
+    <div class="card text-white bg-dark " *ngFor="let equipo of equipos_list" id="equipos">
+      <div class="card-header">{{equipo.nombre}}</div>
+      <div class="card-body">
+        <a routerLink="/equipos/equipo/{{equipo.id}}">
+          <h5 class="card-title">{{equipo.id}}</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

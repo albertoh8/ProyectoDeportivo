@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>{{equipoDet?.nombre}}</h1>
+
+  <h1>Partidos</h1>
+  <div class="row" *ngFor="let partido of partidos">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{partido.idLocal}} - {{partido.idVisitante}}</h5>
+          <p class="card-text">{{partido.fecha}}</p>
+          <a routerLink="/partido/partido/{{partido.idLocal}}" class="btn btn-primary">Ver partido</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

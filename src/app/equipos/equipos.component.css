@@ -21,10 +21,7 @@
 .segundo-div {
   width: 65%;
   height: 100%;
-  background-color: rgb(177, 222, 207);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+
 }
 
 #equipos {

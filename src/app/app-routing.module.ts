@@ -15,7 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./partidos/partidos.module').then(m => m.PartidosModule)
   },
   { path: 'sucesos', component: SucesosComponent },
-  { path: 'equipos', component: EquiposComponent }
+  {
+    path: 'equipos', component: EquiposComponent,
+    loadChildren: () => import('./equipos/equipos.module').then(m => m.EquiposModule)
+  }
 ];
 
 @NgModule({
