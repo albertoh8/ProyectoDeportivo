@@ -9,6 +9,7 @@ import { EquiposModule } from './equipos/equipos.module';
 import { PartidosModule } from './partidos/partidos.module';
 import { SucesosModule } from './sucesos/sucesos.module';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     EquiposModule,
     PartidosModule,
     SucesosModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

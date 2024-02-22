@@ -17,23 +17,33 @@
   <div class="card m-3">
     <h5 class="card-header">Añade un partido</h5>
     <div class="card-body">
-      <form>
+      <form [formGroup]="partidoForm">
         <div class="row">
           <div class="col-5 mb-3">
             <label class="form-label">IdLocal</label>
-            <input type="text" class="form-control" #idLocal>
+            <input type="text" class="form-control" formControlName="idLocal" #idLocal>
+            <span class="text-danger" *ngIf="partidoForm.get('idLocal')?.errors?.['required']">
+              IdLocal es obligatoria.
+            </span>
           </div>
           <div class="col-5 mb-3">
             <label class="form-label">IdVisitante</label>
-            <input type="text" class="form-control" #idVisitante>
+            <input type="text" class="form-control" formControlName="idVisitante" #idVisitante>
+            <span class="text-danger" *ngIf="partidoForm.get('idVisitante')?.errors?.['required']">
+              IdVisitante es obligatoria.
+            </span>
           </div>
           <div class="col-5 mb-3">
             <label class="form-label">Fecha del partido</label>
-            <input type="text" class="form-control" #fecha />
+            <input type="text" class="form-control" formControlName="fecha" #fecha />
+            <span class="text-danger" *ngIf="partidoForm.get('fecha')?.errors?.['required'] ">
+              Fecha es obligatoria
+            </span>
           </div>
 
           <div class="col-5 mb-3">
-            <button class="btn btn-primary" (click)="guardarPartido(idLocal.value,idVisitante.value,fecha.value)">Añadir
+            <button type="submit" class="btn btn-primary" [disabled]="!partidoForm.valid"
+              (click)="guardarPartido(idLocal.value,idVisitante.value,fecha.value)">Añadir
               Partido</button>
           </div>
         </div>
@@ -42,60 +52,6 @@
     </div>
   </div>
 
-  <div class="card m-3">
-    <h5 class="card-header">Añade los goles</h5>
-    <div class="card-body">
-      <form>
-        <div class="row">
-          <div class="col-5 mb-3">
-            <label class="form-label">IdParticipante</label>
-            <input type="text" class="form-control" #idParticipante>
-          </div>
-          <div class="col-5 mb-3">
-            <label class="form-label">Minuto</label>
-            <input type="text" class="form-control" #minuto>
-          </div>
-          <div class="col-5 mb-3">
-            <button class="btn btn-primary" (click)="agregarGol(idParticipante.value, minuto.value)"> Añadir
-              Gol</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <ul *ngFor="let gol of goles">
-    <ol>{{gol?.idParticipante}} {{gol?.minuto}}</ol>
-  </ul>
-
-  <div class="card m-3">
-    <h5 class="card-header">Añade las tarjetas</h5>
-    <div class="card-body">
-      <form>
-        <div class="row">
-          <div class="col-5 mb-3">
-            <label class="form-label">IdParticipante</label>
-            <input type="text" class="form-control" #idParticipanteTarj>
-          </div>
-          <div class="col-5 mb-3">
-            <label class="form-label">Minuto</label>
-            <input type="text" class="form-control" #minutoTarj>
-          </div>
-
-          <div class="col-5 mb-3">
-            <label class="form-label">Tipo</label>
-            <input type="text" class="form-control" #tipo>
-
-          </div>
-          <div class="col-5 mb-3">
-            <button class="btn btn-primary"
-              (click)="aniadirTarjeta(idParticipanteTarj.value,minutoTarj.value,tipo.value)">
-              Añadir Tarjeta</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
 </body>
 
 </html>

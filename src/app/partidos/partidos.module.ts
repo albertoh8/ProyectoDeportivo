@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EditPartidoComponent } from './edit-partido/edit-partido.component';
 import { AddPartidoComponent } from './add-partido/add-partido.component';
 import { PartidosListComponent } from './partidos-list/partidos-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -35,7 +35,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   exports: [RouterModule]
